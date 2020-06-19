@@ -1,10 +1,18 @@
 import React from 'react';
-import Navigacija from "./components/navigationBar"
+
+import {Container} from "react-bootstrap";
+
+import NavigationBar from "./components/navigationBar"
+import HomeMain from "./components/homeMain"
 
 function App() {
   return (
     <div className="App">
-      <Navigacija/>
+      <NavigationBar/>
+
+      <Container>
+      <HomeMain/>
+      </Container>
     </div>
   );
 }

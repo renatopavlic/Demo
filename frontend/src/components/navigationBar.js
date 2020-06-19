@@ -4,7 +4,7 @@ import Nav from "react-bootstrap/Nav";
 
 import style from "./index.css";
 
-function Navigacija() {
+function NavigationBar() {
   return (
     <React.Fragment>
       <Navbar bg="light" expand="lg">
@@ -21,4 +21,4 @@ function Navigacija() {
   )
 };
 
-export default Navigacija;
+export default NavigationBar;

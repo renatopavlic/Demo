@@ -1,3 +1,28 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
 .my-link {
   margin: 0 15px;
+}
+
+.main-div {
+  margin: 20px auto;
+  text-align: center;
+}
+
+h1, p {
+  padding: 20px;
+  font-family: 'Lucida Sans', sans-serif;
+}
+
+.my-img {
+  height: 60vh;
+  width: 80%;
+}
+
+.my-img:hover {
+  border: 5px solid rgb(199, 199, 199);
 }
