@@ -26,3 +26,11 @@ h1, p {
 .my-img:hover {
   border: 5px solid rgb(199, 199, 199);
 }
+
+.my-form {
+  margin: 20px auto;
+  width: 70%;
+  padding: 20px;
+  border: 3px solid skyblue;
+  border-radius: 10px;
+}

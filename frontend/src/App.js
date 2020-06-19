@@ -1,19 +1,26 @@
 import React from 'react';
 
-import {Container} from "react-bootstrap";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
-import NavigationBar from "./components/navigationBar"
-import HomeMain from "./components/homeMain"
+
+import HomePage from "./pages/homePage";
+import AboutPage from "./pages/aboutPage";
+
+
 
 function App() {
   return (
-    <div className="App">
-      <NavigationBar/>
-
-      <Container>
-      <HomeMain/>
-      </Container>
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/" exact component={HomePage}></Route>
+        <Route path="/about" exact component={AboutPage}></Route>
+      </Switch>
+    </Router>
   );
 }
 
