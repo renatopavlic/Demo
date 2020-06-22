@@ -7,7 +7,6 @@ function InputForm() {
 
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [name, setName] = useState("");
   const [error, setError] = useState(false);
   const history = useHistory()
 
@@ -44,8 +43,9 @@ function InputForm() {
   }
 
   return (
+    
     <React.Fragment>
-      <Form className="my-form">
+      <Form className="my-form" onSubmit={submit} >
         <Form.Group controlId="exampleForm.ControlInput1">
           <Form.Label>Email address</Form.Label>
           <Form.Control type="email" placeholder="name@example.com" onChange={e=>setEmail(e.target.value)}/>

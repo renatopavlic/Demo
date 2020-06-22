@@ -1,5 +1,6 @@
 const express = require('express')
 const validator = require("email-validator");
+
 const app = express()
 const port = 3001
 
@@ -15,8 +16,7 @@ app.post('/API/contact', (req, res) => {
   let messageOk = false;
   if(req.body.email){
     console.log(validator.validate(req.body.email));
-    mailOk = true; // ili false ako nije
-  }
+    mailOk = true; 
   if(req.body.message.length>30){
     console.log("jel poruka dovoljno duga");
     messageOk = true;
