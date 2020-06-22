@@ -14,7 +14,7 @@ function InputForm() {
   const submit = e => {
     setError(false);
     e.preventDefault();
-    fetch(process.env.REACT_APP_ROOT+"/API/contact", {
+    fetch("http://localhost:3001/API/contact", {
       method: 'POST',
       body: JSON.stringify({
         email: email,
@@ -48,11 +48,11 @@ function InputForm() {
       <Form className="my-form">
         <Form.Group controlId="exampleForm.ControlInput1">
           <Form.Label>Email address</Form.Label>
-          <Form.Control type="email" placeholder="name@example.com" onChange={e=>setName(e.target.value)}/>
+          <Form.Control type="email" placeholder="name@example.com" onChange={e=>setEmail(e.target.value)}/>
         </Form.Group>
         <Form.Group controlId="exampleForm.ControlTextarea1">
           <Form.Label>Message</Form.Label>
-          <Form.Control as="textarea" rows="3" onChange={e=>setName(e.target.value)} />
+          <Form.Control as="textarea" rows="3" onChange={e=>setMessage(e.target.value)} />
         </Form.Group>
         <Button type="submit" variant="primary">Submit</Button>
       </Form>
